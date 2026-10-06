@@ -15,7 +15,7 @@ def info():
         'message': 'You are doing great,  Abhilash ! <3',
         'deployed_on': 'kubernetes',
         'env': 'dev',
-        'app_name': 'python-app-1'
+        'app_name': 'python-app-project'
     })
 
 @app.route('/api/v1/healthz')
