@@ -30,3 +30,13 @@ jobs:
         with:
           push: true
           tags: abhilash10/python-app-1:${{ env.COMMIT_ID }}
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: 'abhilash10/python-app-1:${{ env.COMMIT_ID }}'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
