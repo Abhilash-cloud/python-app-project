@@ -1,0 +1,13 @@
+name: python-app-project
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: build image
+      run: sudo apt update
