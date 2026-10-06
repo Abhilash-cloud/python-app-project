@@ -7,8 +7,9 @@ on:
       - src/**
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: build image
-      shell: bash
-      run: sudo apt update
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build image
+        shell: bash
+        run: sudo apt update
